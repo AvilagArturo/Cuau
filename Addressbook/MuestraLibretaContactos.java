@@ -1,11 +1,11 @@
-package addressbook;
+
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.list;
+import java.util.List;
 
 import javax.swing.BorderFactory; 
 import javax.swing.Box; 
@@ -48,6 +48,10 @@ public class MuestraLibretaContactos extends JFrame{
     private JTextField tfConsulta;
     private JButton btnInsertar;
 
+    Persona persona = new Persona();
+    ConsultasPersona consultasPersona = new ConsultasPersona();
+
+
 
     public MuestraLibretaContactos(){
         super("Libreta de contactos");
@@ -72,7 +76,7 @@ public class MuestraLibretaContactos extends JFrame{
         lblTelefono = new JLabel();
         tfTelefono = new JTextField(10);
         pnlConsulta = new JPanel();
-        lblConsulta new JLabel();
+        lblConsulta = new JLabel();
         tfConsulta = new JTextField(10);
         btnConsulta = new JButton();
         btnNavegar = new JButton();
@@ -81,11 +85,11 @@ public class MuestraLibretaContactos extends JFrame{
     
         setLayout(new FlowLayout (FlowLayout.CENTER, 10, 10)); setSize(400, 500);
         setResizable(false);
-        pnlNavegar.setLayout(new Box Layout (pnlNavegar, BoxLayout.X_AXIS));
+        pnlNavegar.setLayout(new BoxLayout (pnlNavegar, BoxLayout.X_AXIS));
         btnAnterior.setText("Anterior"); btnAnterior.setEnabled(false);
         btnAnterior.addActionListener(new ActionListener()
             {
-                public void action Performed (ActionEvent evt){
+                public void actionPerformed (ActionEvent evt){
                     btnAnteriorActionPerformed (evt);
                     }
         }
@@ -119,9 +123,13 @@ public class MuestraLibretaContactos extends JFrame{
         
         pnlNavegar.add(btnSiguiente); add (pnlNavegar);
         pnlMostrar.setLayout(new GridLayout(5, 2, 4, 4));
-        lblId.setText("ID Contacto"); pnlMostrar.add(lblId);
-        tfid.setEditable(false); pnlMostrar.add(tfId);
-        lb lNombre.setText("Nombre(s):"); pnlMostrar.add(lblNombre); pnlMostrar.add(tfNombre);
+        lblId.setText("ID Contacto"); 
+        pnlMostrar.add(lblId);
+        tfId.setEditable(false); 
+        pnlMostrar.add(tfId);
+        lblNombre.setText("Nombre(s):"); 
+        pnlMostrar.add(lblNombre); 
+        pnlMostrar.add(tfNombre);
         lblApellidos.setText("Apellidos: ");
         pnlMostrar.add(lblApellidos);
         pnlMostrar.add(tfApellidos);
@@ -155,7 +163,7 @@ public class MuestraLibretaContactos extends JFrame{
         btnNavegar.setText("Navegar por todos los registros"); 
         btnNavegar.addActionListener(new ActionListener()
         {
-            public void action Performed (ActionEvent evt)
+            public void actionPerformed (ActionEvent evt)
             {
             btnNavegarActionPerformed (evt);
             }
@@ -166,7 +174,7 @@ public class MuestraLibretaContactos extends JFrame{
         
         btnInsertar.setText("Insertar nuevo registro"); 
         btnInsertar.addActionListener(new ActionListener(){
-        public void action Performed (ActionEvent evt) 
+        public void actionPerformed (ActionEvent evt) 
             { 
                 btnInsertarActionPerformed (evt);
             }

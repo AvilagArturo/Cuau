@@ -1,4 +1,4 @@
-package addressbook;
+
 
 public class Persona{
     private int idDireccion;
@@ -15,7 +15,7 @@ public class Persona{
         setIdDireccion(idDireccion);
         setNombre(nombre);
         setApellido(apellido);
-        setCorreo(correo);
+        setEmail(correo);
         setTelefono(telefono);
     }
 
@@ -43,11 +43,11 @@ public class Persona{
         return apellido;
     }
 
-    public void setCorreo(String correo){
+    public void setEmail(String correo){
         this.correo = correo;
     }
 
-    public String getCorreo(){
+    public String getEmail(){
         return correo;
     }
 
