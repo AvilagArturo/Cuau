@@ -1,5 +1,4 @@
 package addressbook;
-import addressbook.Persona;
 
 public class Persona{
     private int idDireccion;
