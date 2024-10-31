@@ -20,7 +20,7 @@ public class Persona{
     }
 
     public void setIdDireccion(int idDireccion){
-        this.idDireccion = idDireccion
+        this.idDireccion = idDireccion;
     }
 
     public int getIdDireccion(){
