@@ -22,7 +22,7 @@ public class ConsultasPersona{
 
 
     public ConsultasPersona(){
-        Persona = new persona;
+        Persona = new persona();
         try{
             conexion= DriverManager.getConnection(URL, USUARIO, PASSWORD);
 
