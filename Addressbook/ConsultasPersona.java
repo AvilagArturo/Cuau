@@ -14,9 +14,9 @@ public class ConsultasPersona{
     private static final String PASSWORD = "2028199";
 
     private Connection conexion;
-    private PreparedStatement seleccionaTodasLasPersonas;
-    private PreparedStatement seleccionaPersonasPorApellido;
-    private PreparedStatement insertaNuevaPersona;
+    private PrepareStatement seleccionaTodasLasPersonas;
+    private PrepareStatement seleccionaPersonasPorApellido;
+    private PrepareStatement insertaNuevaPersona;
 
 
     public ConsultasPersona(){
@@ -61,7 +61,7 @@ public class ConsultasPersona{
                 conjuntoResultados.close();
             }
             catch (SQLException sqlExcep){
-                SQLExcep.printStackTrace();
+                sqlExcep.printStackTrace();
                 cerrar();
             }
         }
