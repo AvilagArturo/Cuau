@@ -123,7 +123,7 @@ public class ConsultasPersona{
             conexion.close();
         }
         catch(SQLException sqlExcep){
-            SQLExcep.printStackTrace();
+            sqlExcep.printStackTrace();
         }
     }
 }
