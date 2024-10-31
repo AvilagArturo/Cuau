@@ -14,9 +14,9 @@ public class ConsultasPersona{
     private static final String PASSWORD = "2028199";
 
     private Connection conexion;
-    private PrepareStatement seleccionaTodasLasPersonas;
-    private PrepareStatement seleccionaPersonasPorApellido;
-    private PrepareStatement insertaNuevaPersona;
+    private PreparedStatement seleccionaTodasLasPersonas;
+    private PreparedStatement seleccionaPersonasPorApellido;
+    private PreparedStatement insertaNuevaPersona;
 
 
     public ConsultasPersona(){
