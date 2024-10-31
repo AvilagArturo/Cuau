@@ -13,7 +13,7 @@ public class ConsultasPersona{
     private static final String USUARIO = "root";
     private static final String PASSWORD = "2028199";
 
-    private Persona persona;
+    private Persona persona();
 
     private Connection conexion;
     private PreparedStatement seleccionaTodasLasPersonas;
