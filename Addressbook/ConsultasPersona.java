@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConsultasPersona{
-    private static final String URL = "";
+    private static final String URL = "jdbc:mysql//localhost:3306/cuau?serverTimezone=UTC";
     private static final String USUARIO = "root";
     private static final String PASSWORD = "2028199";
 
@@ -35,8 +35,8 @@ public class ConsultasPersona{
         }
     }
 
-    public List< Persona > obtenerTodasLasPersonas(){
-        List< Persona > resultados = null;
+    public List<Persona > obtenerTodasLasPersonas(){
+        List<Persona > resultados = null;
         ResultSet conjuntoResultados;
 
         try{
