@@ -23,9 +23,9 @@ public class ConsultasPersona{
         try{
             conexion= DriverManager.getConnection(URL, USUARIO, PASSWORD);
 
-            seleccionaTodasLasPersonas = conexion.preparedStatement("SELECT * From Contactos");
-            seleccionaPersonasPorApellido = conexion.preparedStatement("SELECT * From Contactos WHERE apellidos = ?");
-            insertaNuevaPersona = conexion.preparedStatement("INSERT INTO Contactos"+
+            seleccionaTodasLasPersonas = conexion.prepareStatement("SELECT * From Contactos");
+            seleccionaPersonasPorApellido = conexion.prepareStatement("SELECT * From Contactos WHERE apellidos = ?");
+            insertaNuevaPersona = conexion.prepareStatement("INSERT INTO Contactos"+
             "(nombre, apellidos, email, telefono)"+
             "VALUES (?, ?, ?, ?)");
         }
