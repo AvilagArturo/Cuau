@@ -1,6 +1,5 @@
 package addressbook;
 
-import addressbook.Persona;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -14,6 +13,8 @@ public class ConsultasPersona{
     private static final String USUARIO = "root";
     private static final String PASSWORD = "2028199";
 
+    private Persona persona;
+
     private Connection conexion;
     private PreparedStatement seleccionaTodasLasPersonas;
     private PreparedStatement seleccionaPersonasPorApellido;
@@ -21,6 +22,7 @@ public class ConsultasPersona{
 
 
     public ConsultasPersona(){
+        Persona = new persona;
         try{
             conexion= DriverManager.getConnection(URL, USUARIO, PASSWORD);
 
