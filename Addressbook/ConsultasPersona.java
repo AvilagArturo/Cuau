@@ -10,8 +10,8 @@ import java.util.List;
 
 public class ConsultasPersona{
     private static final String URL = "";
-    private static final String USUARIO = "root"
-    private static final String PASSWORD = "2028199"
+    private static final String USUARIO = "root";
+    private static final String PASSWORD = "2028199";
 
     private Connection conexion;
     private PreparedStatement seleccionaTodasLasPersonas;
@@ -100,7 +100,7 @@ public class ConsultasPersona{
         }
     }
 
-    pbulic int agregarPersona(String nomb, String apell, String email, String tel){
+    public int agregarPersona(String nomb, String apell, String email, String tel){
         int resultado = 0;
 
         try{
